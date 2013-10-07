@@ -13,8 +13,7 @@
   <front>
     <title abbrev="fticks">F-Ticks - A Federation Log Format</title>
 
-    <author fullname="Leif Johansson" initials="L." role="editor"
-            surname="Johansson">
+    <author fullname="Leif Johansson" initials="L." role="editor" surname="Johansson">
       <organization>SUNET</organization>
 
       <address>
@@ -38,7 +37,7 @@
 
     <abstract>
       <t>This document describes a log format for distributed identity
-      federations that can be used as a tool for meetering and statistics
+      federations that can be used as a tool for metering and statistics
       gathering.</t>
     </abstract>
 
@@ -56,7 +55,7 @@
       identity providers and relying parties. In such a system it is often
       important to collect statistics and meetering in a consistent way.</t>
 
-      <t>This document describes a simple (yet extensible) tex logformat which
+      <t>This document describes a simple (yet extensible) text logformat which
       can be to communicate the essential aspects of authentication events to
       log reception software (eg <xref target="RFC5424">syslog</xref>).</t>
     </section>
@@ -126,7 +125,7 @@ attribute = ( ALPHA / DIGIT )]]></artwork>
 
       <section title="RP">
         <t>Relying Party identifier. A string uniquely identifying the relying
-        party invoved in the authentication event.</t>
+        party involved in the authentication event.</t>
       </section>
 
       <section title="AP">
