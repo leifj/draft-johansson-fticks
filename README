@@ -1,6 +1,5 @@
 F-Ticks
 =======
 
-This is an I-D specifying the f-ticks syslog format for federation audit logging. This format
-is widely deployed in eduroam: http://monitor.eduroam.org.
+This is an I-D specifying the f-ticks syslog format for federation audit logging. This format is widely deployed in eduroam: http://monitor.eduroam.org.
 
