@@ -26,7 +26,7 @@ travis: $(HTML)
 ifeq ("$(TRAVIS_PULL_REQUEST)", "false")
 	mv $(HTML) /tmp
 	git remote set-url --push origin $(REPO)
-        git remote set-branches --add origin gh-pages
+	git remote set-branches --add origin gh-pages
 ifdef GIT_NAME
 	git config -l | grep -q user.name || git config user.name $(GIT_NAME)
 endif
