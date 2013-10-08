@@ -1,8 +1,8 @@
 DOC=draft-johansson-fticks
-VER=01
 
 ## Change nothing below this line unless you know what you're doing
 
+VER=$(shell python -c 'from lxml import etree; print etree.parse("$(DOC).xml").find("[@docName]").get("docName").split("-")[-1]')
 TEXT=$(DOC)-$(VER).txt
 HTML=$(DOC)-$(VER).html
 

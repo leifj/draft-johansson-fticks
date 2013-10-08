@@ -8,8 +8,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-johansson-fticks-00"
-     ipr="pre5378Trust200902">
+<rfc category="info" docName="draft-johansson-fticks-01" ipr="pre5378Trust200902">
   <front>
     <title abbrev="fticks">F-Ticks - A Federation Log Format</title>
 
