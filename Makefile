@@ -22,7 +22,7 @@ clean:
 
 REPO=$(shell git config remote.origin.url | sed 's!^git@github.com:!https://github.com/!')
 
-deploy: $(HTML) 
+deploy:
 	git remote | grep -q pages || git remote add -t gh-pages pages $(REPO)
 ifdef GIT_NAME
 	git config -l | grep -q user.name || git config user.name $(GIT_NAME)
@@ -35,6 +35,7 @@ ifdef GIT_TOKEN
 endif
 	git branch -a | grep -q gh-pages || git branch pages/gh-pages
 	git checkout gh-pages
+	$(MAKE)
 	git add $(HTML)
 	git commit -m "$(HTML)" $(HTML)
 	git push
