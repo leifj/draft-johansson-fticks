@@ -24,7 +24,7 @@ REPO=$(shell git config remote.origin.url | sed 's!^git@github.com:!https://gith
 
 deploy: $(HTML)
 	mv $(HTML) /tmp
-ifndef TRAVIS_PULL_REQUEST
+ifeq ( $(TRAVIS_PULL_REQUEST), 0)
 	git remote | grep -q pages || git remote add -t gh-pages pages $(REPO)
 ifdef GIT_NAME
 	git config -l | grep -q user.name || git config user.name $(GIT_NAME)
