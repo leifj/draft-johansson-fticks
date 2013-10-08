@@ -2,4 +2,4 @@ language: script
 script: "make deploy"
 env:
    global:
-	- secure: "LeGSPFf50xSTI7rxlBACczat2Rso/8o2U1EdTCwvWA5qsSkUP9Xa3/QlUorrkZ0d8lbuTlOAoMkgZca5ZDtkGNrY5rSDgfsIorIqA+Vbtg5PKrKzzKqanawkC16piP1To/vs6bGFcN9WE3kFGzhsANNhoqMGVMaxmoxVyqCw4qA="
+      - secure: "LeGSPFf50xSTI7rxlBACczat2Rso/8o2U1EdTCwvWA5qsSkUP9Xa3/QlUorrkZ0d8lbuTlOAoMkgZca5ZDtkGNrY5rSDgfsIorIqA+Vbtg5PKrKzzKqanawkC16piP1To/vs6bGFcN9WE3kFGzhsANNhoqMGVMaxmoxVyqCw4qA="
