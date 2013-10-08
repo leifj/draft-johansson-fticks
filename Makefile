@@ -2,7 +2,7 @@ DOC=draft-johansson-fticks
 
 ## Change nothing below this line unless you know what you're doing
 
-VER=$(shell grep docName $(DOC).xml | sed -r 's!.* docName="(.+)".*!\1!g' | awk -F- '{print $$NF}')
+VER=$(shell python -c 'from lxml import etree; print etree.parse("$(DOC).xml").find("[@docName]").get("docName").split("-")[-1]')
 TEXT=$(DOC)-$(VER).txt
 HTML=$(DOC)-$(VER).html
 
