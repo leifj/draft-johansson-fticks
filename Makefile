@@ -34,12 +34,12 @@ endif
 ifdef GIT_TOKEN
 	echo "https://$(GH_TOKEN):@github.com" >> .git/credentials && git config credential.helper "store --file=.git/credentials"
 endif
-	git branch -a | grep -q gh-pages || git branch pages/gh-pages
+	git branch | grep -v '/' | grep -q gh-pages || git branch gh-pages pages/gh-pages
 	git checkout gh-pages
 	mv /tmp/$(HTML) . && git add $(HTML)
 	git commit -m "$(HTML)" $(HTML)
 	git checkout master
-        git push --all
+	git push --all
 ifdef GIT_TOKEN
 	rm -f .git/credentials
 endif
