@@ -38,7 +38,7 @@ endif
 	$(MAKE)
 	git add $(HTML)
 	git commit -m "$(HTML)" $(HTML)
-	git push
+	git push --all
 	git checkout master
 ifdef GIT_TOKEN
 	rm -f .git/credentials
