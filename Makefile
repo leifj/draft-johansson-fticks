@@ -42,7 +42,7 @@ endif
 	mv /tmp/$(HTML) . && git add $(HTML)
 	rm -f index.html && cp $(HTML) index.html && git add index.html
 	git commit -m "$(HTML)" $(HTML) index.html || /bin/true
-	git push gh-pages
+	git push origin gh-pages
 ifdef GH_TOKEN
 	rm -f .git/credentials
 endif
