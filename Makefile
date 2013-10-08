@@ -1,8 +1,8 @@
 DOC=draft-johansson-fticks
-VER=01
 
 ## Change nothing below this line unless you know what you're doing
 
+VER=$(shell grep docName $(DOC).xml | sed -r 's!.* docName="(.+)".*!\1!g')
 TEXT=$(DOC)-$(VER).txt
 HTML=$(DOC)-$(VER).html
 
