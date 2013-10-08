@@ -12,7 +12,7 @@ $(TEXT): $(DOC).xml
 	xml2rfc $< -o $@
 
 $(HTML): $(DOC).xml
-	xml2rfc $< -o $@
+	xml2rfc $< --html -o $@
 
 clean:
 	rm -f *.html *.txt *~
