@@ -38,7 +38,7 @@ endif
 	git checkout gh-pages && git merge -m "merge" master
 	mv /tmp/$(HTML) . && git add $(HTML)
 	rm -f index.html && cp $(HTML) index.html && git add index.html
-	git commit -m "$(HTML)" $(HTML) index.html
+	git commit -m "$(HTML)" $(HTML) index.html || /bin/true
 	git checkout master
 	git push --all
 ifdef GIT_TOKEN
