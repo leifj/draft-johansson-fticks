@@ -9,10 +9,10 @@ HTML=$(DOC)-$(VER).html
 all: $(TEXT) $(HTML) 
 
 $(TEXT): $(DOC).xml
-	xml2rfc $< $@
+	xml2rfc $< -o $@
 
 $(HTML): $(DOC).xml
-	xml2rfc $< $@
+	xml2rfc $< -o $@
 
 clean:
 	rm -f *.html *.txt *~
