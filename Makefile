@@ -37,7 +37,7 @@ endif
 	git branch | grep -v '/' | grep -q gh-pages || git branch gh-pages pages/gh-pages
 	git checkout gh-pages && git merge -m "merge" master
 	mv /tmp/$(HTML) . && git add $(HTML)
-	ln -s $(HTML) index.html && git add index.html
+	rm -f index.html && cp $(HTML) index.html && git add index.html
 	git commit -m "$(HTML)" $(HTML) index.html
 	git checkout master
 	git push --all
