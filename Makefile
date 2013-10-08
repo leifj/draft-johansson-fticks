@@ -32,7 +32,7 @@ endif
 ifdef GIT_EMAIL
 	git config -l | grep -q user.email || git config user.email $(GIT_EMAIL)
 endif
-ifdef GIT_TOKEN
+ifdef GH_TOKEN
 	echo "https://$(GH_TOKEN):@github.com" >> .git/credentials && git config credential.helper "store --file=.git/credentials"
 endif
 	git branch | grep -v '/' | grep -q gh-pages || git branch gh-pages pages/gh-pages
