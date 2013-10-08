@@ -25,7 +25,7 @@ REPO=$(shell git config remote.origin.url | sed 's!^git@github.com:!https://gith
 travis: $(HTML)
 	mv $(HTML) /tmp
 	git remote | grep -q pages || git remote add -t gh-pages pages $(REPO)
-ifneq "$(TRAVIS_PULL_REQUEST)", "false"
+ifneq ("$(TRAVIS_PULL_REQUEST)", "false")
 ifdef GIT_NAME
 	git config -l | grep -q user.name || git config user.name $(GIT_NAME)
 endif
@@ -44,4 +44,5 @@ endif
 	git push --all
 ifdef GIT_TOKEN
 	rm -f .git/credentials
+endif
 endif
