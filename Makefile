@@ -20,7 +20,7 @@ clean:
 .git/credentials:
 	echo "https://$(GH_TOKEN):@github.com" >> .git/credentials
 
-REPO=$(shell git config remote.origin.url | sed 's!^git@github.com:!https://github.com/!')
+REPO=$(shell git config remote.origin.url | sed 's!^git://github.com!https://github.com!')
 
 travis: $(HTML)
 ifeq ("$(TRAVIS_PULL_REQUEST)", "false")
